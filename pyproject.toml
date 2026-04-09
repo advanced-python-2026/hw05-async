@@ -1,0 +1,31 @@
+[project]
+name = "hw05-async"
+version = "0.1.0"
+description = "ДЗ 5 — Асинхронное программирование"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.9",
+    "aiofiles>=24.1",
+    "tqdm>=4.66",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["hw05"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24", "ruff>=0.8", "mypy>=1.13"]
