@@ -81,7 +81,7 @@ async def _async_iter(items):
 def _write_sample(tmp_path: Path, variant: int) -> Path:
     """Записывает тестовые данные во временный файл."""
     filepath = tmp_path / f"sample_{variant}.txt"
-    filepath.write_text(SAMPLE_DATA[variant], encoding="utf-8")
+    filepath.write_bytes(SAMPLE_DATA[variant].encode("utf-8"))
     return filepath
 
 
