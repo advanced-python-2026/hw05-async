@@ -7,8 +7,8 @@ from pathlib import Path
 import pytest
 
 # Path to the student's fixed file
-FIXED_FILE = Path(__file__).resolve().parent.parent / "hw05" / "fixed_async.py"
-BROKEN_FILE = Path(__file__).resolve().parent.parent / "src" / "broken_async.py"
+FIXED_FILE = Path.cwd() / "hw05" / "fixed_async.py"
+BROKEN_FILE = Path.cwd() / "src" / "broken_async.py"
 
 
 def _get_source() -> str:

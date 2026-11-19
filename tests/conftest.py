@@ -4,9 +4,9 @@ from pathlib import Path
 
 import pytest
 
-STUDENT_FILE = Path(__file__).resolve().parent.parent / "STUDENT.md"
+STUDENT_FILE = Path.cwd() / "STUDENT.md"
 HW_NUMBER = 5
-SEMESTER = "2026-spring"
+SEMESTER = "2027-spring"
 
 
 def _read_student_name() -> str:

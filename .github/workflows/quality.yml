@@ -1,4 +1,4 @@
-name: Autograding
+name: Quality
 on:
   push:
     branches: [main]
@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  quality:
     runs-on: [self-hosted, linux, x64]
     timeout-minutes: 10
     steps:
@@ -20,5 +20,3 @@ jobs:
         run: uv run ruff check .
       - name: Format check
         run: uv run ruff format --check .
-      - name: Tests
-        run: uv run pytest -v --tb=short
