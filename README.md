@@ -1,6 +1,6 @@
 # ДЗ 5 — Асинхронное программирование
 
-Полный текст задания: https://advanced-python.ru/advanced-python/homework/hw05
+Полный текст задания: https://courses.sabal.pro/advanced-python/homework/hw05
 
 ## Быстрый старт
 
